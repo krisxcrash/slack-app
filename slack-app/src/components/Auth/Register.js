@@ -27,8 +27,8 @@ class Register extends React.Component {
 
   isFormValid = () => {
     let errors = [];
-
     let error;
+
     if (this.isFormEmpty(this.state)) {
       error = { message: "Fill in all fields" };
       this.setState({ errors: errors.concat(error) });
@@ -85,7 +85,6 @@ class Register extends React.Component {
               )}?d=identicon`
             })
             .then(() => {
-              debugger;
               this.saveUser(createdUser).then(() => {
                 console.log("user saved");
               });
@@ -133,7 +132,7 @@ class Register extends React.Component {
     return (
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" icon color="orange" textAlign="center">
+          <Header as="h1" icon color="orange" textAlign="center">
             <Icon name="puzzle piece" color="orange" />
             Register for DevChat
           </Header>
