@@ -10,9 +10,7 @@ const isImage = message => {
   return message.hasOwnProperty("image") && !message.hasOwnProperty("content");
 };
 
-const timeFromNow = timestamp => {
-  moment(timestamp).fromNow();
-};
+const timeFromNow = timestamp => moment(timestamp).fromNow();
 
 const Message = ({ message, user }) => (
   <Comment>
