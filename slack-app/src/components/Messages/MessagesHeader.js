@@ -13,7 +13,7 @@ class MessagesHeader extends React.Component {
     return (
       <Segment clearing>
         {/* Channel Title */}
-        <Header fluid="true" as="h2" style={{ marginBottom: 0 }}>
+        <Header fluid="true" as="h2" floated="left" style={{ marginBottom: 0 }}>
           <span>
             {channelName}
             {!isPrivateChannel && <Icon name={"star outline"} color="black" />}
